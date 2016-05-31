@@ -507,8 +507,11 @@ We can now observe the frequency of different k-mers:
 counts = np.fromiter(counts.values(), dtype=int, count=len(counts))
 integer_histogram(counts, xlim=(-1, 250), lw=2)
 ```
+<!-- exercise begin -->
 
+**Exercise:** Filter out the reads containing errors.
 
+<!-- exercise end -->
 
 > ## tips {.callout}
 >  - (list of list -> list) with tz.concat
@@ -621,7 +624,11 @@ Note how the G-A and G-C transitions are different between the repeat and
 non-repeat parts of the genome. This information can be used to classify
 previously unseen DNA sequence.
 
-Challenge: add a step to the start of the pipe to unzip the data so you don't have to keep a decompressed version on your hard drive. Yes, unzip can be streamed, too!
+<!-- exercise begin -->
+
+**Challenge:** add a step to the start of the pipe to unzip the data so you don't have to keep a decompressed version on your hard drive. Yes, unzip can be streamed, too!
+
+<!-- exercise end -->
 
 # Conclusions
 
