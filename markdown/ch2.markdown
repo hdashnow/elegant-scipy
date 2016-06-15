@@ -542,6 +542,19 @@ Although the above clustering technique is quite fragile, there are other ways t
 **Exercise:** Do our clusters do a better job of predicting survival than the original clusters in the paper? What about UV signature?
 
 Plot survival curves using the original­ clusters and UV signature columns of the patient data. How do they compare to our clusters?
+
+<!-- solution begin -->
+**Solution:**
+
+```python
+for cluster_method in ['UV-signature','original-clusters']:
+    clusters = data_table.iloc[cluster_method]
+    plot_cluster_survival_curves(clusters, data_table.columns, patients)
+    title(cluster_method)
+
+    #XXX incomplete!
+```
+<!-- solution end -->
 <!-- exercise end -->
 
 <!-- exercise begin -->
